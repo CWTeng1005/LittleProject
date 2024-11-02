@@ -1,0 +1,76 @@
+/* 重置默认的body样式 */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    min-height: 100vh; /* 页面高度填满视口 */
+    background-image: url(./NightCity.jpg); /* 设置背景图片 */
+    background-size: cover; /* 让背景图片覆盖整个背景区域 */
+}
+
+/* 定义.loader的样式，使其为一个水平容器 */
+.loader {
+    position: relative;
+    display: flex;
+}
+
+/* 每个loader条块的基本样式 */
+.loader span {
+    width: 50px; /* 每个条块的宽度 */
+    height: 300px; /* 每个条块的高度 */
+    margin: 0 20px; /* 条块之间的水平间距 */
+    background-color: rgba(255, 255, 255, .5); /* 条块的颜色和透明度 */
+    animation: animate 1.4s linear infinite; /* 绑定动画效果 */
+}
+
+/* 为每个span元素设置不同的动画延迟 */
+.loader span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.loader span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.loader span:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.loader span:nth-child(6) {
+    animation-delay: 1.0s;
+}
+
+.loader span:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+/* 定义动画效果 */
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 rgba(97, 182, 243, 0.5); /* 设置初始阴影 */
+        opacity: 0; /* 设置初始透明度 */
+        transform: translateX(-50px) scale(1); /* 向左移动并缩放 */
+    }
+
+    50% {
+        box-shadow: 0 20px 50px rgba(97, 182, 243, 0.5); /* 添加阴影效果 */
+        opacity: 1; /* 设置完全不透明 */
+        transform: translateX(0px) scale(1.2); /* 还原位置并放大 */
+    }
+
+    100% {
+        box-shadow: 0 0 0 rgba(43, 103, 125, 0.5); /* 消除阴影 */
+        opacity: 0; /* 恢复透明 */
+        transform: translateX(50px) scale(1); /* 向右移动并恢复原始大小 */
+    }
+}
