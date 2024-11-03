@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1::selection {
+    background: lightsalmon;
+    color: white;
+}
+
+p::selection {
+    background: lightskyblue;
+    color: white;
+}
