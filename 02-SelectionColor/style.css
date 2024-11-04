@@ -1,20 +1,24 @@
+/* 设置页面的基础样式 */
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0;  /* 清楚默认的页面边距 */
+    padding: 0; /* 清除默认的页面内边距 */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+/* 设置容器的样式 */
 .container {
-    width: 70%;
-    margin: 0 auto;
+    width: 70%; /* 设置容器宽度为页面宽度的70% */
+    margin: 0 auto; /* 让容器水平居中 */
 }
 
+/* 当用户选择（高亮）标题文本时，设置其背景色和文字颜色 */
 h1::selection {
-    background: lightsalmon;
-    color: white;
+    background: lightsalmon;    /* 设置标题被选中文字的背景色 */
+    color: white;   /* 设置标题被选中文字的颜色 */
 }
 
+/* 当用户选择（高亮）段落文本时，设置其背景色和文字颜色 */
 p::selection {
-    background: lightskyblue;
-    color: white;
+    background: lightskyblue;   /* 设置段落被选中文字的背景色 */
+    color: white;   /* 设置段落被选中文字的颜色 */
 }
