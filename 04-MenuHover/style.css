@@ -1,0 +1,49 @@
+/* 全局样式设置 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: lemonchiffon;
+}
+
+/* 设置导航列表样式 */
+ul {
+    position: absolute; /* 绝对定位，使列表相对于页面定位 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;  /* 使用 flex 布局，横向排列列表项 */
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+
+/* 设置列表项（li）的样式 */
+ul li {
+    list-style: none;   /* 去除列表项的默认符号 */
+    transition: .5s;    /* 设置过渡效果，持续0.5s */
+}
+
+/* 设置链接（a标签）的样式 */
+ul li a {
+    position: relative; /* 定位链接，使其可以进行进一步的样式调整 */
+    display: block; /* 让链接的点击区域扩展为整个列表项 */
+    text-align: center; 
+    margin: 0 25px; /* 左右外边距 25px，增加链接间距 */
+    color: teal;
+    font-size: 40px;
+    text-decoration: none;  /* 去除默认的下划线 */
+    text-transform: uppercase;  /* 转换文字为大写 */
+}
+
+/* 鼠标悬停在整个 ul 上时，给 li 应用模糊和透明度 */
+ul:hover li {
+    opacity: .2;    /* 所有列表项设置透明度为 20% */
+    filter: blur(2px);  /* 添加2px的模糊效果 */
+}
+
+/* 当鼠标悬停在某个 li 项上时，恢复清晰度和不透明度 */
+ul li:hover {
+    opacity: 1; /* 设置透明度为100% */
+    filter: blur(0px);  /* 移除模糊效果 */
+}
