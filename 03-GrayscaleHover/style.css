@@ -1,0 +1,22 @@
+/* 重置页面默认边距和填充，设置背景颜色 */
+body {
+    margin: 0;
+    padding: 0;
+    background: lemonchiffon;
+}
+
+/* 设置图片样式 */
+img {
+    /* 图片绝对定位，使其位置基于页面中心 */
+    position: absolute;
+    top: 50%;   /* 距离顶部50% */
+    left: 50%;  /* 距离左侧50% */
+    transform: translate(-50%, -50%);   /* 通过平移来确保图片居中 */
+    filter: grayscale(100%);    /* 图片初始为灰度显示 */
+    transition: 1s ease-in-out; /* 鼠标悬停切换效果，持续时间1秒，采用渐入渐出过渡 */
+}
+
+/* 当鼠标悬停在图片上时，将灰度设置为 0%，恢复原始颜色 */
+img:hover {
+    filter: grayscale(0%);
+}
